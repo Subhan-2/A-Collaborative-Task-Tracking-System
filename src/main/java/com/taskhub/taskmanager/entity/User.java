@@ -26,12 +26,12 @@ public class User implements UserDetails {
 
     private String password;
 
-    // Optional: role field (simplified, or you can use Enum if you prefer)
+   
     private String role;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        // You can implement authorities from the role string if needed
+
         return Collections.emptyList(); // or return List.of(new SimpleGrantedAuthority("ROLE_USER"))
     }
 
@@ -42,21 +42,21 @@ public class User implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return true; // change if needed
+        return true; 
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return true; // change if needed
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return true; // change if needed
+        return true; 
     }
 
     @Override
     public boolean isEnabled() {
-        return true; // change if needed
+        return true; 
     }
 }
